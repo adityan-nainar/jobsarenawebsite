@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+{{HEAD Will AI coding agents cost more than developers? · Mr AI Decoder | Episode 5 claim check: Gartner says AI coding costs could pass a developer's salary by 2028. Per task agents are 90-96% cheaper; the verdict is misleading. Run your own numbers.}}
+<body>
+{{HEADER ep}}
+<main id="main"><div class="narrow">
+
+<p class="crumbs"><a href="index.html">Home</a> / Episode 5</p>
+<header class="ep-hero">
+  <div class="ep-top"><span class="tag"><b>EP 5</b> · Claim check</span><span class="mono">Posted 15 Nov 2026</span></div>
+  <h1>Will AI coding agents cost more than developers?</h1>
+  <p class="lede" style="font-size:19px">Gartner says AI coding costs could pass a developer’s salary by 2028. We read the numbers behind the headline.</p>
+  <div class="links"><a href="https://www.instagram.com/reel/DfxJBrvgUKV/" rel="noopener">Watch the Reel</a><a href="files/mr-ai-decoder-ep5-coding-agent-cost-model.xlsx" download>Download the cost model (.xlsx)</a></div>
+</header>
+
+<div class="article">
+
+  <section class="card block" aria-labelledby="verdict">
+    <div class="verdict"><span class="stamp">Misleading</span><h2 id="verdict">True for heavy users. Not for most.</h2></div>
+    <p>Per task, agents are far cheaper than people. The bill only passes a person’s pay when an agent runs many times the work, and the salary Gartner compares against is a global average of about $2,000 a month, well below a US developer’s.</p>
+  </section>
+
+  <section class="card block" aria-labelledby="s1">
+    <p class="step">1 · The claim</p>
+    <h2 id="s1">“AI coding agents will cost more than real developers”</h2>
+    <p>In June 2026 Gartner forecast that AI coding costs could exceed the average developer’s salary by 2028. The salary in that comparison is a global average of about $2,000 a month.</p>
+    <p><span class="src-chip">Gartner, 24 Jun 2026, via Computer Weekly and InfoWorld · grade C</span></p>
+  </section>
+
+  <section class="card block" aria-labelledby="s2">
+    <p class="step">2 · Per task</p>
+    <h2 id="s2">Per task, agents are 90–96% cheaper</h2>
+    <p>A Carnegie Mellon and Stanford study compared 48 people with 4 agent frameworks on 16 tasks. The agents cost 90.4–96.2% less per task. Their work was also lower quality.</p>
+    <p class="note">16 tasks across data analysis, engineering, computation, writing and design, not only coding. A small sample.</p>
+    <p><span class="src-chip">Wang et al., arXiv 2510.22780, Nov 2025 · grade B</span></p>
+  </section>
+
+  <section class="card block" aria-labelledby="s3">
+    <p class="step">3 · Per month</p>
+    <h2 id="s3">But agents run far more tasks</h2>
+    <p>A cheap task done many times adds up. Move the slider to see when the agent’s total passes the person’s.</p>
+    <div class="calc" id="calc-tasks">
+      <div class="ctl">
+        <label for="mult"><span>Tasks the agent runs for each task a person does</span><output id="mult-out" for="mult">25×</output></label>
+        <input type="range" id="mult" min="1" max="100" step="1" value="25">
+      </div>
+      <div class="ctl">
+        <label for="review"><span>Time a person spends checking each agent task</span><output id="review-out" for="review">0%</output></label>
+        <input type="range" id="review" min="0" max="50" step="5" value="0">
+      </div>
+      <div class="bars" aria-live="polite">
+        <div class="bar"><span>Person</span><div class="track"><div class="fill h" id="b-h"></div></div><span class="v" id="v-h">100</span></div>
+        <div class="bar"><span>Agent, 96% off</span><div class="track"><div class="fill a" id="b-hi"></div></div><span class="v" id="v-hi">95</span></div>
+        <div class="bar"><span>Agent, 90% off</span><div class="track"><div class="fill a" id="b-lo"></div></div><span class="v" id="v-lo">240</span></div>
+      </div>
+      <p class="result" id="tasks-result">At 25× the work, the agent costs 95 to 240, against 100 for the person.</p>
+      <p class="note" id="tasks-note">The agent costs more past 10.4× the work (90% cheaper per task) to 26.3× (96% cheaper). Index: a person’s cost per task = 100. Our simplified model, not a forecast · grade D.</p>
+    </div>
+  </section>
+
+  <section class="card block" aria-labelledby="s4">
+    <p class="step">4 · What companies pay</p>
+    <h2 id="s4">Most pay $200–$500 a month per developer</h2>
+    <p>In Gartner’s survey of tech leaders, 23% spend $200–$500 a month per developer on tokens for coding agents. About 6% spend more than $2,000.</p>
+    <p class="note">Read through news coverage. One outlet reports 5% rather than 6% for the over-$2,000 group.</p>
+    <p><span class="src-chip">Gartner Peer Insights, Jun 2026 · grade C</span></p>
+  </section>
+
+  <section class="card block" aria-labelledby="s5">
+    <p class="step">5 · Your number</p>
+    <h2 id="s5">What share of your pay is the AI bill?</h2>
+    <p>The median US software developer earns $135,980 a year, about $11,300 a month (BLS, May 2025 · grade A). Put in your own numbers.</p>
+    <div class="calc" id="calc-pay">
+      <div class="fields">
+        <div class="field"><label for="pay">Your pay per year (US$)</label><input id="pay" type="number" inputmode="numeric" min="0" step="1000" value="135980"></div>
+        <div class="field"><label for="bill">AI bill per month (US$)</label><input id="bill" type="number" inputmode="numeric" min="0" step="10" value="200"></div>
+      </div>
+      <div class="quick" aria-label="Try a bill">
+        <button type="button" data-bill="20">$20</button><button type="button" data-bill="200">$200</button><button type="button" data-bill="500">$500</button><button type="button" data-bill="2000">$2,000</button>
+      </div>
+      <div aria-live="polite">
+        <p class="big-out num" id="share">1.8%</p>
+        <p class="result">of your monthly pay.</p>
+        <p class="note" id="pay-note">That is $2,400 a year. The bill would match your pay at $11,332 a month.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card block" aria-labelledby="s6">
+    <div class="do-this"><span class="mono">Do this</span><p><b>Cost an agent per month, not per task.</b></p></div>
+    <p>The spreadsheet has all three parts: cost per task, the monthly bill against pay, and a section for your own numbers. Blue cells are yours to change.</p>
+    <div class="btn-row"><a class="btn" href="files/mr-ai-decoder-ep5-coding-agent-cost-model.xlsx" download>Download the cost model (.xlsx)</a></div>
+  </section>
+
+  <section class="card block" aria-labelledby="s7">
+    <h2 id="s7">What this doesn’t show</h2>
+    <p>Quality: the study found agent work was lower quality, and the checking slider above is only a rough stand-in for that. Pay: the BLS figure is a US national median, and pay varies by country, company and level. Prices: token prices change fast. Gartner’s analyst described a move from $20 to $200 to $2,000 a month as tools shift from seat pricing to token pricing.</p>
+  </section>
+
+  <section class="card block" aria-labelledby="src">
+    <h2 id="src">Sources</h2>
+    <ul class="sources">
+      <li><span class="grade g-a">A</span><p>US Bureau of Labor Statistics, Occupational Outlook Handbook: Software Developers. Median pay $135,980 a year, May 2025. <a href="https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm" rel="noopener">bls.gov</a></p></li>
+      <li><span class="grade g-b">B</span><p>Wang et al. (Carnegie Mellon, Stanford), “How Do AI Agents Do Human Work? Comparing AI and Human Workflows Across Diverse Occupations”, 6 Nov 2025. <a href="https://arxiv.org/abs/2510.22780" rel="noopener">arxiv.org/abs/2510.22780</a></p></li>
+      <li><span class="grade g-c">C</span><p>Gartner, 24 Jun 2026: forecast and Peer Insights survey, read through news coverage. <a href="https://www.computerweekly.com/news/366645054/Gartner-AI-coding-agents-will-cost-more-than-real-developers" rel="noopener">Computer Weekly</a> · <a href="https://www.infoworld.com/article/4189176/ai-coding-token-costs-are-on-track-to-rival-human-payroll-2.html" rel="noopener">InfoWorld</a></p></li>
+      <li><span class="grade g-d">D</span><p>Our cost model: simplified, not a forecast. <a href="files/mr-ai-decoder-ep5-coding-agent-cost-model.xlsx" download>Download (.xlsx)</a></p></li>
+    </ul>
+    <p class="note">Grades: A official statistics · B published study · C news report, announcement, survey or forecast · D our own assumption. <a href="method.html">How we check</a></p>
+  </section>
+
+  <section class="card next">
+    <div class="lock" aria-hidden="true"><svg width="24" height="28" viewBox="0 0 24 28"><rect x="2" y="12" width="20" height="15" rx="4" fill="#fff"/><path d="M6 12V8a6 6 0 0 1 12 0v4" fill="none" stroke="#fff" stroke-width="3"/></svg></div>
+    <div>
+      <p class="mono">Coming next · EP 6</p>
+      <p class="claim">“170 million new jobs.” Created by what?</p>
+      <p class="muted">Follow <a href="{{IG}}" rel="noopener">@mr.ai.decoder</a> so you catch it.</p>
+    </div>
+  </section>
+
+</div>
+</div></main>
+{{FOOTER}}
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var HUMAN = 100, SAVE_HI = 0.962, SAVE_LO = 0.904;
+  var fmt = function (n) { return n >= 100 ? Math.round(n).toLocaleString("en-US") : (Math.round(n * 10) / 10).toLocaleString("en-US"); };
+  var money = function (n) { return "$" + Math.round(n).toLocaleString("en-US"); };
+
+  function tasks() {
+    var m = +$("mult").value, r = +$("review").value / 100;
+    var perHi = HUMAN * (1 - SAVE_HI) + r * HUMAN, perLo = HUMAN * (1 - SAVE_LO) + r * HUMAN;
+    var hi = m * perHi, lo = m * perLo, top = Math.max(HUMAN, hi, lo);
+    $("mult-out").textContent = m + "×"; $("review-out").textContent = Math.round(r * 100) + "%";
+    $("b-h").style.width = (HUMAN / top * 100) + "%"; $("b-hi").style.width = (hi / top * 100) + "%"; $("b-lo").style.width = (lo / top * 100) + "%";
+    $("v-h").textContent = "100"; $("v-hi").textContent = fmt(hi); $("v-lo").textContent = fmt(lo);
+    var msg = "At " + m + "× the work, the agent costs " + fmt(hi) + " to " + fmt(lo) + ", against 100 for the person.";
+    if (lo < HUMAN) msg += " Cheaper either way.";
+    else if (hi > HUMAN) msg += " More either way.";
+    $("tasks-result").textContent = msg;
+    $("tasks-note").textContent = "The agent costs more past " + (HUMAN / perLo).toFixed(1) + "× the work (90% cheaper per task) to " + (HUMAN / perHi).toFixed(1) + "× (96% cheaper). Index: a person’s cost per task = 100. Our simplified model, not a forecast · grade D.";
+  }
+
+  function pay() {
+    var p = parseFloat($("pay").value), b = parseFloat($("bill").value);
+    if (!(p > 0) || !(b >= 0)) { $("share").textContent = "–"; $("pay-note").textContent = "Enter your yearly pay and a monthly bill."; return; }
+    var month = p / 12, share = b / month * 100;
+    $("share").textContent = (share < 10 ? share.toFixed(1) : Math.round(share)) + "%";
+    $("pay-note").textContent = "That is " + money(b * 12) + " a year. The bill would match your pay at " + money(month) + " a month.";
+  }
+
+  ["mult", "review"].forEach(function (id) { $(id).addEventListener("input", tasks); });
+  ["pay", "bill"].forEach(function (id) { $(id).addEventListener("input", pay); });
+  Array.prototype.forEach.call(document.querySelectorAll("[data-bill]"), function (btn) {
+    btn.addEventListener("click", function () { $("bill").value = btn.getAttribute("data-bill"); pay(); });
+  });
+  tasks(); pay();
+})();
+</script>
+</body>
+</html>
