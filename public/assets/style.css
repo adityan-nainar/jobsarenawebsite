@@ -172,7 +172,7 @@ input[type="range"] { width: 100%; accent-color: var(--chad); min-height: 32px; 
 .field label { font-weight: 600; font-size: 15px; }
 .field input { font: 700 18px var(--font-body); padding: 10px 12px; border: 1px solid #CFCCC4; border-radius: 10px; background: #fff; color: var(--ink); width: 100%; font-variant-numeric: tabular-nums; }
 .quick { display: flex; gap: 8px; flex-wrap: wrap; }
-.quick button { font: 700 14px var(--font-body); padding: 8px 14px; border-radius: 10px; border: 1px solid var(--line); background: #fff; cursor: pointer; min-height: 40px; }
+.quick button { font: 700 14px var(--font-body); padding: 8px 14px; border-radius: 10px; border: 1px solid var(--line); background: #fff; color: var(--ink); cursor: pointer; min-height: 40px; }
 .quick button:hover { border-color: var(--ink); }
 .big-out { font-size: clamp(40px, 7vw, 64px); font-weight: 800; letter-spacing: -.04em; line-height: 1; }
 .note { font-size: 13px; color: var(--muted); }
