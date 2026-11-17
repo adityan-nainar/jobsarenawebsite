@@ -202,3 +202,8 @@ input[type="range"] { width: 100%; accent-color: var(--chad); min-height: 32px; 
   .site-nav { gap: 4px 14px; font-size: 14px; }
 }
 @media (prefers-reduced-motion: reduce) { .fill { transition: none; } }
+
+/* report checklist (rogue-agents.html) */
+.checklist { margin: 14px 0 6px; padding-left: 22px; display: grid; gap: 10px; }
+.checklist li { padding-left: 4px; line-height: 1.5; }
+.checklist li::marker { font-weight: 800; color: var(--chad); }
